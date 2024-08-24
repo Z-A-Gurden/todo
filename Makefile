@@ -1,6 +1,6 @@
 CXX := g++
 OBJ_DIR := obj
-OBJECTS := $(addprefix $(OBJ_DIR)/, main.o menu.o read.o add.o mark.o remove.o erase.o)
+OBJECTS := $(addprefix $(OBJ_DIR)/, mmenu.o read.o add.o mark.o remove.o erase.o)
 
 #compiles all object files into main todo file
 todo: $(OBJECTS)

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "headers.h"
 
-void menu()
+int main()
 {
     //options listed outside of loop so that it doesn't clutter console when returning from another function (e.g. read_list())
     int option{};

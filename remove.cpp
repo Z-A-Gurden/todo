@@ -31,7 +31,7 @@ void remove_line()
     std::cin >> num;
     while(num > n_lines || num <= 0)
     {
-    std::cout << "Woops, looks like line " << num << " doesn't exist\n";
+    std::cout << "Whoops, looks like line " << num << " doesn't exist\n";
     std::cin >> num;
     }
 
