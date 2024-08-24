@@ -32,6 +32,8 @@ void mark_as_complete()
     std::cin >> mark;
     while(mark > n_lines || mark <= 0)
     {
+        std::cin.clear();
+        std::cin.ignore();
         std::cout << "Whoops, looks like that  line does not exist. Try again.\n";
         std::cin >> mark;
     }

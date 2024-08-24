@@ -33,6 +33,8 @@ int main()
                 return 0;
             default:
                 std::cout << "Invalid choice! Try again.\n";
+                std::cin.clear();
+                std::cin.ignore();
                 break;
         }
     }

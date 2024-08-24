@@ -31,8 +31,10 @@ void remove_line()
     std::cin >> num;
     while(num > n_lines || num <= 0)
     {
-    std::cout << "Whoops, looks like line " << num << " doesn't exist\n";
-    std::cin >> num;
+        std::cin.clear();
+        std::cin.ignore();
+        std::cout << "Whoops, looks like line " << num << " doesn't exist\n";
+        std::cin >> num;
     }
 
     //reading from in multiple times in one file sets file pointer to end leading to no data being written later, this sets it back to beginning
