@@ -3,7 +3,7 @@
 
 A simple todo list in the console, purely made for learning, not for serious use.
 
-## How to install
+## How to build
 
 To install, type within the todo directory:
 ```
