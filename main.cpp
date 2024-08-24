@@ -34,7 +34,7 @@ int main()
             default:
                 std::cout << "Invalid choice! Try again.\n";
                 std::cin.clear();
-                std::cin.ignore();
+                std::cin.ignore(1024);
                 break;
         }
     }
