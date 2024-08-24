@@ -5,7 +5,17 @@
 void remove_line()
 {
     std::ifstream in{"list.txt"};
+    if(!in)
+    {
+        std::cerr << "File failed to open!\n";
+        return;
+    }
     std::ofstream temp_list{"temp.txt"};
+    if(!temp_list)
+    {
+        std::cerr << "File failed to open!\n";
+        return;
+    }
 
     read_list();
     std::cout << "Enter the number at the start of the line which you want to remove.\n";

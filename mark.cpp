@@ -10,8 +10,18 @@ void mark_as_complete()
     std::cin >> mark;
     std::string line{};
     std::ifstream in{"list.txt", std::ios::app};
+    if(!in)
+    {
+        std::cerr << "File failed to open!\n";
+        return;
+    }
     int i{1};
     std::ofstream temp_list{"temp.txt"};
+    if(!temp_list)
+    {
+        std::cerr << "File failed to open!\n";
+        return;
+    }
     while(getline(in, line))
     {
         if(i == mark) temp_list << line << ' ' << "\xe2\x98\x91" << '\n';
