@@ -7,7 +7,7 @@ void read_list()
     std::ifstream in{"list.txt"};
     if(!in)
     {
-        std::cerr << "File failed to open!\n";
+        std::cerr << "File failed to open or doesn't exist! Try adding a goal first.\n";
         return;
     }
     std::string line{};
