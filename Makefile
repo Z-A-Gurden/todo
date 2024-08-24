@@ -11,7 +11,6 @@ $(OBJ_DIR)/%.o: %.cpp headers.h
 	mkdir -p $(OBJ_DIR)
 	$(CXX) $< -c -o $@
 
-
 .PHONY: clean clean-obj
 #removes all content created with the Makefile including list.txt
 clean: clean-obj
