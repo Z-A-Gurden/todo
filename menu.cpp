@@ -40,7 +40,7 @@ int main()
                 erase_list();
                 break;
             case 6:
-                return;
+                return 0;
         }
     }
 }
