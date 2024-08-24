@@ -5,7 +5,7 @@ A simple todo list in the console, purely made for learning, not for serious use
 
 ## How to build
 
-To install, type within the todo directory:
+To build, type within the todo directory:
 ```
 make
 ```
