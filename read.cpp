@@ -5,6 +5,11 @@
 void read_list()
 {
     std::ifstream in{"list.txt"};
+    if(!in)
+    {
+        std::cerr << "File failed to open or doesn't exist! Try adding a goal first.\n";
+        return;
+    }
     std::string line{};
     //displays all lines of list.txt and prefixes them with a number
     //useful for selection of goals in different contexts

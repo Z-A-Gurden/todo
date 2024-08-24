@@ -1,6 +1,6 @@
 CXX := g++
 OBJ_DIR := obj
-OBJECTS := $(addprefix $(OBJ_DIR)/, main.o menu.o read.o add.o mark.o remove.o erase.o)
+OBJECTS := $(addprefix $(OBJ_DIR)/, menu.o read.o add.o mark.o remove.o erase.o)
 
 #compiles all object files into main todo file
 todo: $(OBJECTS)
@@ -10,7 +10,6 @@ todo: $(OBJECTS)
 $(OBJ_DIR)/%.o: %.cpp headers.h
 	mkdir -p $(OBJ_DIR)
 	$(CXX) $< -c -o $@
-
 
 .PHONY: clean clean-obj
 #removes all content created with the Makefile including list.txt
