@@ -3,13 +3,15 @@
 
 void menu()
 {
+    //options listed outside of loop so that it doesn't clutter console when returning from another function (e.g. read_list())
+    int option{};
+    std::cout << "Welcome to your todo list, what do you want to do?\n 1) List goals\n 2) Add goal\n 3) Mark goal complete\n 4) Remove goal from list\n 5) Erase list\n 6) Exit\n";
     while(true)
     {
         //user selects action in this loop
-        int option{};
         while(true)
         {
-            std::cout << "Welcome to your todo list, what do you want to do?\n 1) List goals\n 2) Add goal\n 3) Mark goal complete\n 4) Remove goal from list\n 5) Erase list\n 6) Exit\n";
+            std::cout << "> ";
             std::cin >> option;
             if(option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6)
             {
