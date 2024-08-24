@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 #include "headers.h"
 
 int main()
@@ -34,7 +35,7 @@ int main()
             default:
                 std::cout << "Invalid choice! Try again.\n";
                 std::cin.clear();
-                std::cin.ignore(1024);
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 break;
         }
     }
