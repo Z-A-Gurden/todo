@@ -12,7 +12,6 @@ void mark_as_complete()
         std::cerr << "File failed to open!\n";
         return;
     }
-    int i{1};
     std::ofstream temp_list{"temp.txt"};
     if(!temp_list)
     {
@@ -34,7 +33,7 @@ void mark_as_complete()
     {
         std::cin.clear();
         std::cin.ignore();
-        std::cout << "Whoops, looks like that  line does not exist. Try again.\n";
+        std::cout << "Whoops, looks like that line does not exist. Try again.\n";
         std::cin >> mark;
     }
 
@@ -42,9 +41,19 @@ void mark_as_complete()
     in.clear();
     in.seekg(0);
 
+    //this section tests if the line selected has already been marked, if not it will be marked
+    int i{1};
     while(getline(in, line))
     {
-        if(i == mark) temp_list << line << ' ' << Checkmark << '\n';
+        if(i == mark)
+        {
+            if(line.find(Checkmark) != std::string::npos) 
+            {
+                std::cout << "This goal has already been marked complete!\n";
+                temp_list << line << '\n';
+            }
+            else temp_list << line << ' ' << Checkmark << '\n';
+        }
         else temp_list << line << '\n';
         ++i;
     }
