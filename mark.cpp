@@ -1,18 +1,19 @@
 #include <iostream>
 #include <fstream>
+#include "file.h"
 #include "headers.h"
 
 void mark_as_complete()
 {
     const std::string Checkmark{"\xe2\x98\x91"};
     std::string line{};
-    std::ifstream in{"list.txt", std::ios::app};
+    std::ifstream in{dir / "list.txt", std::ios::app};
     if(!in)
     {
         std::cerr << "File failed to open!\n";
         return;
     }
-    std::ofstream temp_list{"temp.txt"};
+    std::ofstream temp_list{dir / "temp.txt"};
     if(!temp_list)
     {
         std::cerr << "File failed to open!\n";
@@ -59,5 +60,5 @@ void mark_as_complete()
     }
     in.close();
     temp_list.close();
-    rename("temp.txt", "list.txt");
+    rename(dir / "temp.txt", "list.txt");
 }

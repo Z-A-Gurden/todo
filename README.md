@@ -2,6 +2,7 @@
 # todo List
 
 A simple todo list in the console, purely made for learning, not for serious use.
+Only compatible with Linux/Unix system due to the use of specific symbolic link
 
 ## How to build
 
