@@ -1,17 +1,19 @@
 #include <fstream>
 #include <iostream>
+#include <filesystem>
+#include "file.h"
 #include "headers.h"
 
 void remove_line()
 {
     std::string line{};
-    std::ifstream in{"list.txt"};
+    std::ifstream in{dir / "list.txt"};
     if(!in)
     {
         std::cerr << "File failed to open!\n";
         return;
     }
-    std::ofstream temp_list{"temp.txt"};
+    std::ofstream temp_list{dir / "temp.txt"};
     if(!temp_list)
     {
         std::cerr << "File failed to open!\n";
@@ -57,6 +59,6 @@ void remove_line()
     //list file is destroyed and temp file is renamed to list.txt, replacing the original
     temp_list.close();
     in.close();
-    remove("list.txt");
-    rename("temp.txt", "list.txt");
+    remove(dir / "list.txt");
+    rename(dir / "temp.txt", "list.txt");
 }

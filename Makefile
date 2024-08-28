@@ -7,7 +7,7 @@ todo: $(OBJECTS)
 	$(CXX) $(OBJECTS) -o $@
 
 #creates object directory if not existant and compiles object files
-$(OBJ_DIR)/%.o: %.cpp headers.h
+$(OBJ_DIR)/%.o: %.cpp headers.h file.h
 	mkdir -p $(OBJ_DIR)
 	$(CXX) $< -c -o $@
 

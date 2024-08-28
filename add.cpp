@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "file.h"
 #include "headers.h"
 
 void add_to_list()
-{   
+{     
     //creates list if not present, file is opened in append so as to not overwrite the original and therefore erase all other goals
-    std::ofstream out{"list.txt", std::ios::app};
+    std::ofstream out{dir / "list.txt", std::ios::app};
     if(!out)
     {
         std::cerr << "File failed to open!\n";
