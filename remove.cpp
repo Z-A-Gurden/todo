@@ -60,5 +60,5 @@ void remove_line()
     temp_list.close();
     in.close();
     remove(dir / "list.txt");
-    rename(dir / "temp.txt", "list.txt");
+    rename(dir / "temp.txt", dir / "list.txt");
 }
