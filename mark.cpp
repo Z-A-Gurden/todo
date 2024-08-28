@@ -60,5 +60,5 @@ void mark_as_complete()
     }
     in.close();
     temp_list.close();
-    rename(dir / "temp.txt", "list.txt");
+    rename(dir / "temp.txt", dir / "list.txt");
 }
